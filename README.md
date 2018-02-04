@@ -6,7 +6,7 @@ Parnika Sharma
 
 ### Summary:
 
-Organization systems are useful, but often, they are so tightly structured it is hard to adapt them to fit all of your daily needs. A bullet journal
+Organization systems are useful, but often, they are so tightly structured it is hard to adapt them to fit all of your daily needs. A bullet journal is a highly customizable and efficient way to organize tasks, notes, and due dates. In its basic form, it is a set of checklists and symbols used to track tasks and progress on tasks. This is an online/digital version of a bullet journal.
 
 ### Users:
 
