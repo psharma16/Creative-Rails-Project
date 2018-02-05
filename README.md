@@ -10,7 +10,7 @@ Organization systems are useful, but often, they are so tightly structured it is
 
 ### Users:
 
-Mostly young people, as the bullet journal demographic seems to be high school and college age students looking for more free-form ways to organize their information.
+Young people, typically students, as at least for the analog version, the bullet journal demographic seems to be high school and college students looking for more free-form ways to organize their information.
 
 ### MVP:
 
