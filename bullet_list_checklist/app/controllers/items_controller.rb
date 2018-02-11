@@ -7,8 +7,7 @@ class ItemsController < ApplicationController
 	end
 
 	/shows the item in question/
-	def show
-		
+	def show	
 	end
 
 	def new
@@ -23,6 +22,25 @@ class ItemsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
+
+	/allows you to edit one of the items in the checklist/
+	def edit
+	end
+
+	/the action that happens in the edit view/
+	def update
+		if @item.update(item_params)
+			redirect_to item_path(@item)
+		else
+			render 'edit'
+		end
+	end
+
+	/Allows you to delete a checklist item/
+	def destroy
+		@item.destroy
+		redirect_to root_path
 	end
 
 	/defining parameters for each item/

@@ -1,6 +1,6 @@
-<h1>Index View Yay!</h1>
+<h1>Welcome to the Bullet Journal</h1>
 
 <% @items.each do |item| %>
-	<h2><%= item.title %></h2>
+	<h2><%= link_to item.title, item %></h2>
 	<p><%= item.description %></p>
 <% end %>
