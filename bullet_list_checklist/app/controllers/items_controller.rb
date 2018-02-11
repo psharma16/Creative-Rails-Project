@@ -1,7 +1,14 @@
 class ItemsController < ApplicationController
+	before_action :find_item, only: [:show, :edit, :update, :destroy]
+
 	/index action/
 	def index
 		@items = Item.all.order("created_at DESC")
+	end
+
+	/shows the item in question/
+	def show
+		
 	end
 
 	def new
@@ -22,6 +29,11 @@ class ItemsController < ApplicationController
 	private
 	def item_params
 		params.require(:item).permit(:title, :description, :status)
+	end
+
+	private
+	def find_item
+		@item = Item.find(params[:id])
 	end
 
 end
