@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  note: MyText
-  completed: 2018-02-04
+  description: MyText
+  status: 1
 
 two:
   title: MyString
-  note: MyText
-  completed: 2018-02-04
+  description: MyText
+  status: 1

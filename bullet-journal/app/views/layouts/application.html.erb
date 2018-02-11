@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BulletJournal</title>
+    <title>BulletListChecklist</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +9,6 @@
   </head>
 
   <body>
-    <div class="row-fluid">
-      <div class="span10 offset1">
-        <div class="hero-unit">
-          <h1>Bullet Journal<h1>
-          <p>Welcome to the Bullet Journal application</p>
-        </div>
-      </div>
-    </div>
     <%= yield %>
   </body>
 </html>
