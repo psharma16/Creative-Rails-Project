@@ -22,4 +22,18 @@ The most basic form of a bullet journal would be very similar to a checklist. Th
 
 ### Issues:
 
-### References:
+The main issues that came up during development revolved around unfamiliarity with how everything worked and was interacting with each other. The problems that were the most challenging for me were adding editing and deleting functionality and having those actually work properly.
+
+### References
+
+http://masteruby.github.io/weekly-rails/2014/03/22/how-to-create-todo-list-app-static-pages.html#.WnfI-5M-eXQ
+
+https://www.youtube.com/watch?v=Z9GaNNztcZk&ab_channel=RyanHemrick
+
+https://www.bootstrapcdn.com/fontawesome/
+
+https://fontawesome.bootstrapcheatsheets.com/
+
+https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment
+
+https://gist.github.com/davidphasson/91613

@@ -1,6 +1,38 @@
 <div class="col-md-6 col-md-offset-3">
-	<h2> <%= @item.title %> </h2>
-	<p> <%= @item.description %> </p>
+	
+
+	<div class = "row item">
+
+		<div class = "col-md-12">
+
+			<h2> <%= @item.title %> </h2>
+			<p> <%= @item.description %> </p>
+
+		</div>
+
+		<div class = "col-md-12">
+		<!-- shows the symbol indicated by the selected status in edit view -->
+			<p>
+				<% case @item["status"] %>
+				<% when 0 %>
+					<i class="fa fa-lg fa-square-o"> </i>
+				<% when 1 %>
+					<i class="fa fa-lg fa-pencil-square"> </i>
+				<% when 2 %>
+					<i class="fa fa-lg fa-check-square"> </i>
+				<% when 3 %>
+					<i class="fa fa-lg fa-clock-o"> </i>
+				<% when 4 %>
+					<i class="fa fa-lg fa-star"> </i>
+				<% when 5 %>
+					<i class="fa fa-lg fa-sticky-note-o"> </i>
+				<% when 6 %>
+					<i class="fa fa-lg fa-angle-right"> </i>
+				<% end %>
+			</p>
+
+		</div>
+	</div>
 
 	<%= link_to "Back", root_path %>
 	<%= link_to "Edit", edit_item_path(@item) %>
