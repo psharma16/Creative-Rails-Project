@@ -18,11 +18,29 @@ The most basic form of a bullet journal would be very similar to a checklist. Th
 
 ### Functionality:
 
+This is a simple way to store and organize tasks and ideas. The interface is very simple. Click on the new item blurb in the top right corner of the screen to get a new bullet journal item. This will bring up a form where you can enter the information for what your newest task or item is and where you can set the status. Once you have added the item, you are directed back to the main page where you can see all of the tasks and ideas you have added. Each will have a little symbol next to it indicating its status to you. You can edit and delete items as needed by clicking on the task's title, which will take you to the individual task page
+
 ### Installation Steps:
+
+1. 	Clone the repository from github in terminal by navigating to a folder where you would like		to keep the rails project and entering the following command.
+
+	git clone https://github.com/psharma16/Creative-Rails-Project.git
+
+2.  In terminal, move into the Creative-Rails-Project directory, then the bullet_list_checklist 	directory using the following commands.
+	
+3.	Run the following commands in the bullet_list_checklist folderto set up the database model 		correctly:
+	rake db:drop db:create db:migrate
+
+4.	Run the following command to start up the rails server:
+	rails server
+
+5.	In your browser, navigate to localhost:3000. You should see the front page of the application.
 
 ### Issues:
 
-The main issues that came up during development revolved around unfamiliarity with how everything worked and was interacting with each other. The problems that were the most challenging for me were adding editing and deleting functionality and having those actually work properly.
+The main issues that came up during development revolved around unfamiliarity with how everything worked and was interacting with each other. The specific elements that were the hardest to implement were the editing and deleting functionality and having those link to the correct pages and work properly. The issues surrounding that implementation were particularly hard to solve because I wasn't sure how to approach solving them or where to start. Ultimately, finding better resources and working more slowly ended up solving a lot of my problems, since it gave me a chance to understand and get familiar with where everything needed to go.
+
+The biggest issues still present revolve around how interactive the project is. In order to get the statuses to show individually, I have the statuses represented as an integer, which is how the user has to enter them in the edit and create new items forms, which is decidedly non-ideal. It would be preferable to have the user just select the symbol to use, that way the user could determine the meanings of the symbols. Also, at the moment sorting by symbol type has not been implemented.
 
 ### References
 
@@ -37,3 +55,5 @@ https://fontawesome.bootstrapcheatsheets.com/
 https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment
 
 https://gist.github.com/davidphasson/91613
+
+https://www.digitalocean.com/community/questions/how-to-run-rails-application-cloned-from-github
