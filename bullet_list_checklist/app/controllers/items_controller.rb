@@ -46,6 +46,7 @@ class ItemsController < ApplicationController
 	/Allows you to change an object's status to being complete/
 	def complete
 		@item.update_attribute(:status, 1)
+		redirect_to root_path
 	end
 
 	/defining parameters for each item/
