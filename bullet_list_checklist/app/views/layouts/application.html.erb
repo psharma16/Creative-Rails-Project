@@ -9,6 +9,16 @@
   </head>
 
   <body>
+
+  	<nav class = "navbar navbar-default">
+  	  <div class = "container">
+  	  	<div class = "navbar-header">
+  	  		<%= link_to "Bullet Journal", root_path, class: "navbar-brand" %>
+  	  	</div>
+  	  	<%= link_to "New Item", new_item_path, class: "navbar-text navbar-link navbar-right" %>
+  	  </div> 
+  	</nav>
+
     <%= yield %>
   </body>
 </html>

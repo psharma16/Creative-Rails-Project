@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-	before_action :find_item, only: [:show, :edit, :update, :destroy]
+	before_action :find_item, only: [:show, :edit, :update, :destroy, :complete]
 
 	/index action/
 	def index
@@ -41,6 +41,11 @@ class ItemsController < ApplicationController
 	def destroy
 		@item.destroy
 		redirect_to root_path
+	end
+
+	/Allows you to change an object's status to being complete/
+	def complete
+		@item.update_attribute(:status, 1)
 	end
 
 	/defining parameters for each item/
