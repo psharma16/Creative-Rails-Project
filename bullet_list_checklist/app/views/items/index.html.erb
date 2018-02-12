@@ -3,40 +3,48 @@
 
 	<% @items.each do |item| %>
 		
-		<!-- formatting for completed items -->
-		<% if item.completed? %>
-			<div class = "row item">
-		  		<div class = "col-md-8">
-				    <h2 style="opacity: 0.5;" ><strike><%= link_to item.title, item %></strike></h2>
-				  	<p style="opacity: 0.5;"><%= item.description %></p>
-			  	</div>
-			  	<div class = "col-md-2">
-				  	<p><%= link_to item, method: :delete, data: {confirm: "Are you sure you want to delete this item?" } do%></p>
-				  		<i class="fa fa-lg fa-trash"> </i>
-				  	<% end %>
-			  	</div>
-		  		
+		<!-- formatting for items -->
+		<div class = "row item">
+
+			<div class = "col-md-8">
+
+				<h2> <%= link_to item.title, item %></h2>
+				<p> <%= item.description %></p>
+
 			</div>
 
-		<!-- formatting for incomplete items -->
-		<% else %>
-			<div class = "row item">
-				<div class = "col-md-8">
-					<h2> <%= link_to item.title, item %></h2>
-					<p> <%= item.description %></p>
-				</div>
-				<div class = "col-md-2">
-					<p><%= link_to complete_item_path(item), method: :patch do %></p>
-						<i class="fa fa-lg fa-check"> </i>
+			<div class = "col-md-4">
+			<!-- shows the symbol indicated by the selected status in edit view -->
+				<p>
+					<% case item["status"] %>
+					<% when 0 %>
+						<i class="fa fa-lg fa-square-o"> </i>
+					<% when 1 %>
+						<i class="fa fa-lg fa-pencil-square"> </i>
+					<% when 2 %>
+						<i class="fa fa-lg fa-check-square"> </i>
+					<% when 3 %>
+						<i class="fa fa-lg fa-clock-o"> </i>
+					<% when 4 %>
+						<i class="fa fa-lg fa-star"> </i>
+					<% when 5 %>
+						<i class="fa fa-lg fa-sticky-note-o"> </i>
+					<% when 6 %>
+						<i class="fa fa-lg fa-angle-right"> </i>
 					<% end %>
-				</div>
-				<div class = "col-md-2">
-					<p><%= link_to item, method: :delete, data: {confirm: "Are you sure you want to delete this item?" } do %></p>
-						<i class="fa fa-lg fa-trash"> </i>
-					<% end %>
-				</div>
-			</div>
-		<% end %>
+				</p>
 
+			</div>
+
+			<div class = "col-md-4">
+
+				<p><%= link_to item, method: :delete, data: {confirm: "Are you sure you want to delete this item?" } do %></p>
+					<i class="fa fa-lg fa-trash"> </i>
+				<% end %>
+
+			</div>
+
+		</div>
 	<% end %>
+
 </div>
